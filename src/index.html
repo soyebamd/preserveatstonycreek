@@ -176,21 +176,23 @@
         <img src="images/Preserve-at-Stony-Creek-Plans.jpg" class="img-fluid" />
       </section>
 
-      <section class="lead-developer my-5">
+      <section class="lead-developer mt-5">
         <div class="container-fluid bg-black text-white g-0">
           <div class="row g-0">
             <div
-              class="col-md-7 d-flex align-items-center justify-content-center"
+              class="col-md-6 d-flex align-items-center justify-content-center p-5"
             >
               <div class="lead-dev-img">
                 <img src="images/logo-white.jpg" class="img-fluid" />
               </div>
             </div>
 
-            <div class="col-md-5 text-black bg-secondary">
+            <div class="col-md-6 text-black bg-secondary p-5">
               <div class="superheadline-wrapper">
                 <h3 class="mb-4">
-                  <span class="superheadline text-white">Developer</span><br />
+                  <span class="superheadline text-black opacity-50"
+                    >Developer</span
+                  ><br />
 
                   PRDC Lead Developer
                 </h3>
@@ -212,7 +214,122 @@
         </div>
       </section>
 
-      <section class="contact">Contact Form</section>
+      <section class="contact text-white">
+        <div class="container z-3 position-relative">
+          <div class="row">
+            <div class="col-md-6 p-5">
+              <div class="contact-text-wrapper">
+                <h3 class="mb-4">Contact Us</h3>
+
+                <p>
+                  Submit your inquiry for Residential Rentals, Residential
+                  Purchase, Commercial Leasing, and Development Questions.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 p-5">
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <label for="name" class="form-label d-none">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <label for="phone" class="form-label d-none"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="form-label d-none"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                <div class="mb-4">
+                  <h4 class="form-label">Reason for Inquiry</h4>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inquiryReason"
+                      id="residentialRentals"
+                      value="Residential Rentals"
+                    />
+                    <label class="form-check-label" for="residentialRentals"
+                      >Residential Rentals</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inquiryReason"
+                      id="residentialPurchase"
+                      value="Residential Purchase"
+                    />
+                    <label class="form-check-label" for="residentialPurchase"
+                      >Residential Purchase</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inquiryReason"
+                      id="commercialLeasing"
+                      value="Commercial Leasing"
+                    />
+                    <label class="form-check-label" for="commercialLeasing"
+                      >Commercial Leasing</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inquiryReason"
+                      id="developmentQuestions"
+                      value="Development Questions"
+                    />
+                    <label class="form-check-label" for="developmentQuestions"
+                      >Development Questions</label
+                    >
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="form-label d-none">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="3"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="https://code.jquery.com/jquery-1.7.js"></script>
