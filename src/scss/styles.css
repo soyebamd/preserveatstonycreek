@@ -12187,4 +12187,8 @@ h3,
 ::placeholder {
   color: white !important;
   opacity: 0.7 !important;
+}
+
+.map {
+  filter: grayscale(0.9);
 }/*# sourceMappingURL=styles.css.map */
