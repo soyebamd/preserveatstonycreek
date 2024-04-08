@@ -29,6 +29,7 @@ body {
 }
 
 $primary_color: #c49b53;
+$bg_secondary: #f7f2ec;
 
 .container {
   max-width: 1200px;
@@ -54,6 +55,12 @@ h2,
 .h2 {
   font-size: 4rem;
 }
+
+h3,
+.h3 {
+  font-size: 3rem;
+}
+
 .banner {
   height: 100vh;
 
@@ -154,4 +161,25 @@ h2,
     font-size: 1.2rem;
     margin: 0;
   }
+}
+
+.slide-show {
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+  }
+}
+
+.slider-heading {
+  background-color: #f7f2ec;
+  h3 {
+    font-size: 3rem;
+    padding: 4rem 0;
+    margin: 0;
+  }
+}
+
+.bg_secondary {
+  background-color: $bg_secondary;
 }

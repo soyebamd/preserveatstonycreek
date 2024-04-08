@@ -12013,6 +12013,11 @@ h2,
   font-size: 4rem;
 }
 
+h3,
+.h3 {
+  font-size: 3rem;
+}
+
 .banner {
   height: 100vh;
   background-position: center !important;
@@ -12103,4 +12108,24 @@ h2,
 .our-vision_text p {
   font-size: 1.2rem;
   margin: 0;
+}
+
+.slide-show img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100vh;
+}
+
+.slider-heading {
+  background-color: #f7f2ec;
+}
+.slider-heading h3, .slider-heading .h3 {
+  font-size: 3rem;
+  padding: 4rem 0;
+  margin: 0;
+}
+
+.bg_secondary {
+  background-color: #f7f2ec;
 }/*# sourceMappingURL=styles.css.map */

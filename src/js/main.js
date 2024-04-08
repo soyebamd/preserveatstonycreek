@@ -1,7 +1,7 @@
 import "../scss/styles.scss";
 import * as bootstrap from "bootstrap";
 
-$(".slider").slick({
+$(".slider, .slide-show").slick({
   fade: true,
   autoplay: true,
 });
