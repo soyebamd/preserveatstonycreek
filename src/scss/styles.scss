@@ -31,6 +31,10 @@ body {
 $primary_color: #c49b53;
 $bg_secondary: #f7f2ec;
 
+.bg-secondary {
+  background-color: $bg_secondary;
+}
+
 .container {
   max-width: 1200px;
 }
@@ -182,4 +186,8 @@ h3,
 
 .bg_secondary {
   background-color: $bg_secondary;
+}
+
+.superheadline-wrapper {
+  max-width: 600px;
 }
