@@ -11968,11 +11968,11 @@ textarea.form-control-lg {
 }
 html {
   /*  font-size: 10px;  - not good idea so convert to % with user browser default font unit - 10/16*100 = 0.62*/
-  font-size: 62.5%;
+  font-size: 100%;
 }
 @media only screen and (max-width: 1200px) {
   html {
-    font-size: 50.5%;
+    font-size: 70.5%;
   }
 }
 
@@ -12005,7 +12005,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 7rem;
+  font-size: 5.625rem;
 }
 
 h2,
@@ -12048,6 +12048,13 @@ h2,
 .our-vision p {
   font-size: 1.334rem;
   margin-top: 1.6em;
+  font-weight: 300;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .our-vision {
+    margin-bottom: 8rem;
+  }
 }
 
 .padding-full {
@@ -12055,9 +12062,11 @@ h2,
 }
 
 .superheadline {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.067rem;
   margin-bottom: 2em;
+  text-transform: uppercase;
   color: #c49b53;
   position: relative;
   letter-spacing: 1px;
@@ -12076,4 +12085,22 @@ h2,
   transform: scaleX(1) !important;
   transition-delay: 200ms;
   left: -5em;
+}
+
+.our-vision_text {
+  padding: 5rem;
+}
+.our-vision_text .icon {
+  font-size: 36px;
+}
+.our-vision_text .text {
+  padding: 0 2rem;
+}
+.our-vision_text h4, .our-vision_text .h4 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+.our-vision_text p {
+  font-size: 1.2rem;
+  margin: 0;
 }/*# sourceMappingURL=styles.css.map */
