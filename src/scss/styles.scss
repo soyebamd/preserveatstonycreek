@@ -70,15 +70,16 @@ h3,
   background-size: cover !important;
   background-repeat: no-repeat !important;
   position: relative;
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   left: 0;
-  //   top: 0;
-  //   background: rgba(0, 0, 0, 0.4);
-  // }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
 }
 
 .logo {
@@ -232,13 +233,11 @@ input:checked + .gold-circle::after {
 }
 
 .contact {
-  background: url(../images/Preserve-at-Stony-Creek-Rendering-4.jpg);
+  background: url(../images/Preserve-at-Stony-Creek-Rendering-7.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  padding: 100px 0;
 
   position: relative;
   &::after {
@@ -310,5 +309,25 @@ input:checked + .gold-circle::after {
   a {
     color: #fff;
     text-decoration: none !important;
+  }
+}
+
+.slick-dots {
+  bottom: 25px;
+}
+
+.slick-dots li button:before {
+  font-size: 15px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.map-wrapper iframe {
+  height: 600px;
+  width: 100%;
+  @media (max-width: 768px) {
+    height: 90vh;
   }
 }

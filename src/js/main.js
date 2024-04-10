@@ -1,7 +1,15 @@
 import "../scss/styles.scss";
 import * as bootstrap from "bootstrap";
 
-$(".slider, .slide-show").slick({
+$(".slide-show").slick({
   fade: true,
-  autoplay: true,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  speed: 3000,
+  infinite: true,
+
+  dots: true,
+
+  focusOnSelect: true,
+  pauseOnHover: false,
 });
