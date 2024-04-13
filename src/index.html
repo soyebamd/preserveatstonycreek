@@ -38,7 +38,22 @@
             />
           </a>
 
-          <a href="#contact" class="btn btn-primary" tabindex="0">CONTACT US</a>
+          <div class="btn-wrapper">
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              tabindex="0"
+              id="btn-contact"
+              >CONTACT US</a
+            >
+
+            <div class="flag-btn d-flex">
+              <a href="#" class="btn langbtn active" data-lang="english"
+                >English</a
+              >
+              <a href="#" class="btn langbtn" data-lang="spanish">Spanish</a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -50,7 +65,7 @@
         <div
           class="banner__content containerm-0 position-relative z-3 text-center"
         >
-          <h1 class="h2 text-uppercase text-white m-0">
+          <h1 class="h2 text-uppercase text-white m-0 bannerHeading">
             Preserve at Stony Creek
           </h1>
         </div>
@@ -66,10 +81,12 @@
                 <h2 class="mb-4">
                   <span class="superheadline">Our Vision</span> <br />
 
-                  Reimagining Norristown State Hospital
+                  <span class="superheadline2">
+                    Reimagining Norristown State Hospital</span
+                  >
                 </h2>
 
-                <p>
+                <p class="supertext">
                   The Preserve at Stony Creek reimagines the former Norristown
                   State Hospital as a destination for current and future
                   residential, commercial, technology and innovation
@@ -225,7 +242,7 @@
                 <h3 class="mb-4">
                   <span class="superheadline text-black">Developer</span><br />
 
-                  PRDC Lead Developer
+                  <span class="superheadline2"> Lead Developer</span>
                 </h3>
 
                 <p>
@@ -337,9 +354,10 @@
                       tabindex="0"
                       value="Residential Rentals"
                     />
-                    <span class="gold-circle"></span>
-                    <label class="form-check-label" for="residentialRentals"
-                      >Residential Rentals</label
+
+                    <label class="form-check-label" for="residentialRentals">
+                      <span class="gold-circle"></span>
+                      <span>Residential</span> Rentals</label
                     >
                   </div>
                   <div class="form-check mb-1">
@@ -352,9 +370,9 @@
                       value="Residential Purchase"
                     />
 
-                    <span class="gold-circle"></span>
-                    <label class="form-check-label" for="residentialPurchase"
-                      >Residential Purchase</label
+                    <label class="form-check-label" for="residentialPurchase">
+                      <span class="gold-circle"></span>
+                      <span>Residential Purchase </span></label
                     >
                   </div>
                   <div class="form-check mb-1">
@@ -367,10 +385,9 @@
                       value="Commercial Leasing"
                     />
 
-                    <span class="gold-circle"></span>
-
-                    <label class="form-check-label" for="commercialLeasing"
-                      >Commercial Leasing</label
+                    <label class="form-check-label" for="commercialLeasing">
+                      <span class="gold-circle"></span
+                      ><span>Commercial Leasing</span></label
                     >
                   </div>
                   <div class="form-check mb-1">
@@ -382,9 +399,10 @@
                       tabindex="0"
                       value="Development Questions"
                     />
-                    <span class="gold-circle"></span>
-                    <label class="form-check-label" for="developmentQuestions"
-                      >Development Questions</label
+
+                    <label class="form-check-label" for="developmentQuestions">
+                      <span class="gold-circle"></span
+                      ><span>Development Questions</span></label
                     >
                   </div>
                 </div>

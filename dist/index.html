@@ -23,28 +23,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: "en",
-            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-            autoDisplay: false,
-            includedLanguages: "fr,de,es",
-            gaTrack: true,
-            gaId: "AIzaSyDeuTtuqQpeMprOSr6aN22cbJ6ciZ3pqnA",
-          },
-          "google_translate_element"
-        );
-      }
-    </script>
-    <script
-      type="text/javascript"
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-    <script type="module" crossorigin src="/assets/index-DK9PwRbA.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C2r_I40J.css">
+    <script type="module" crossorigin src="/assets/index-XpMUPnIW.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BAOiPA2r.css">
   </head>
   <body>
     <div id="google_translate_element"></div>
@@ -59,7 +39,22 @@
             />
           </a>
 
-          <a href="#contact" class="btn btn-primary" tabindex="0">CONTACT US</a>
+          <div class="btn-wrapper">
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              tabindex="0"
+              id="btn-contact"
+              >CONTACT US</a
+            >
+
+            <div class="flag-btn d-flex">
+              <a href="#" class="btn langbtn active" data-lang="english"
+                >English</a
+              >
+              <a href="#" class="btn langbtn" data-lang="spanish">Spanish</a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -71,7 +66,7 @@
         <div
           class="banner__content containerm-0 position-relative z-3 text-center"
         >
-          <h1 class="h2 text-uppercase text-white m-0">
+          <h1 class="h2 text-uppercase text-white m-0 bannerHeading">
             Preserve at Stony Creek
           </h1>
         </div>
