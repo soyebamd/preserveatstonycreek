@@ -12273,7 +12273,7 @@ h3,
   font-size: 1.067rem;
   margin-bottom: 2em;
   text-transform: uppercase;
-  color: #c49b53;
+  color: #000000;
   position: relative;
   letter-spacing: 1px;
   line-height: 1.4;
@@ -12543,6 +12543,25 @@ input:checked + .gold-circle::after {
   right: 20px;
 }
 
+.text-indent {
+  position: absolute;
+  text-indent: -9999px;
+}
+
+#result {
+  position: relative;
+  padding-top: 30px;
+}
+
+#close {
+  font-size: 22px;
+  position: absolute;
+  margin-left: auto;
+  right: 0;
+  cursor: pointer;
+  top: 0;
+}
+
 .map-wrapper iframe {
   height: 600px;
   width: 100%;
@@ -12554,6 +12573,9 @@ input:checked + .gold-circle::after {
 }
 
 @media (max-width: 768px) {
+  .vision {
+    margin-bottom: 0;
+  }
   .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl, .navbar .container-xxl {
     flex-direction: column;
   }

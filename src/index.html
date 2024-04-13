@@ -26,10 +26,11 @@
     />
   </head>
   <body>
-    <header class="site_header position-absolute z-3 w-100">
-      <nav class="navbar">
+    <div id="google_translate_element"></div>
+    <header class="site_header position-absolute z-3 w-100" role="banner">
+      <nav class="navbar" role="navigation">
         <div class="container-fluid px-5">
-          <a class="navbar-brand m-0 mb-md-0 mb-4" href="#">
+          <a class="navbar-brand m-0 mb-md-0 mb-4" href="/" tabindex="0">
             <img
               src="images/logo.png"
               alt="Preserve at Stony Creek "
@@ -37,11 +38,11 @@
             />
           </a>
 
-          <a href="#contact" class="btn btn-primary">CONTACT US</a>
+          <a href="#contact" class="btn btn-primary" tabindex="0">CONTACT US</a>
         </div>
       </nav>
     </header>
-    <section class="slider overflow-hidden">
+    <section class="slider overflow-hidden" role="region">
       <div
         class="banner d-flex align-items-center justify-content-center"
         style="background-image: url('images/home.jpg')"
@@ -56,14 +57,14 @@
       </div>
     </section>
 
-    <main>
-      <section class="section">
+    <main role="application">
+      <section class="section vision" role="article">
         <div class="container gx-lg-0">
           <div class="row gx-lg-0">
             <div class="col-md-6">
               <div class="our-vision">
                 <h2 class="mb-4">
-                  <span class="superheadline">Our Vision</span><br />
+                  <span class="superheadline">Our Vision</span> <br />
 
                   Reimagining Norristown State Hospital
                 </h2>
@@ -87,7 +88,9 @@
               <div class="our-vision-wrapper">
                 <div class="our-vision_text">
                   <div class="icons_text d-flex mb-5">
-                    <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+                    <div class="icon">
+                      <i class="fa-solid fa-landmark" role="presentation"></i>
+                    </div>
 
                     <div class="text">
                       <h3 class="h4">36,000 square feet</h3>
@@ -96,7 +99,9 @@
                   </div>
 
                   <div class="icons_text d-flex mb-5">
-                    <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+                    <div class="icon">
+                      <i class="fa-solid fa-landmark" role="presentation"></i>
+                    </div>
 
                     <div class="text">
                       <h3 class="h4">202,000 square feet</h3>
@@ -105,7 +110,9 @@
                   </div>
 
                   <div class="icons_text d-flex mb-5">
-                    <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+                    <div class="icon">
+                      <i class="fa-solid fa-landmark" role="presentation"></i>
+                    </div>
 
                     <div class="text">
                       <h3 class="h4">453 New homes</h3>
@@ -114,7 +121,9 @@
                   </div>
 
                   <div class="icons_text d-flex mb-0">
-                    <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+                    <div class="icon">
+                      <i class="fa-solid fa-landmark" role="presentation"></i>
+                    </div>
 
                     <div class="text">
                       <h3 class="h4">288 Apartments</h3>
@@ -128,7 +137,10 @@
         </div>
       </section>
 
-      <section class="section development-slide-show my-0 position-relative">
+      <section
+        class="section development-slide-show my-0 position-relative"
+        role="article"
+      >
         <!-- <div class="slider-heading">
           <div class="container"><h3>Development Renderings</h3></div>
         </div> -->
@@ -184,16 +196,16 @@
         </div>
 
         <div class="slider-nav">
-          <div id="move-left" class="arrow">
+          <div id="move-left" class="arrow" tabindex="0">
             <i class="fa-solid fa-angle-left"></i>
           </div>
-          <div id="move-right" class="arrow">
+          <div id="move-right" class="arrow" tabindex="0">
             <i class="fa-solid fa-angle-right"></i>
           </div>
         </div>
       </section>
 
-      <section class="section lead-developer my-5">
+      <section class="section lead-developer my-5" role="article">
         <div class="container-fluid bg-white text-white g-0">
           <div class="row g-0">
             <div
@@ -233,7 +245,7 @@
         </div>
       </section>
 
-      <section class="section plan-layout my-0">
+      <section class="section plan-layout my-0" role="article">
         <img
           src="images/Preserve-at-Stony-Creek-Plans.jpg"
           class="img-fluid w-100"
@@ -241,7 +253,11 @@
         />
       </section>
 
-      <section class="section contact text-white mt-0 mb-0" id="contact">
+      <section
+        class="section contact text-white mt-0 mb-0"
+        id="contact"
+        role="article"
+      >
         <div class="container z-3 position-relative">
           <div class="row">
             <div class="col-md-6 p-5">
@@ -256,15 +272,28 @@
             </div>
 
             <div class="col-md-6 p-5 pt-md-5 pt-0">
-              <form>
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                id="form"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="5b511971-0339-4fc3-b52f-acd8acabb0e0"
+                />
+
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <label for="name" class="form-label d-none">Name</label>
                     <input
                       type="text"
+                      name="name"
                       class="form-control"
                       id="name"
                       placeholder="Enter your name"
+                      tabindex="0"
+                      required
                     />
                   </div>
                   <div class="col-md-6 mb-4">
@@ -275,7 +304,10 @@
                       type="tel"
                       class="form-control"
                       id="phone"
+                      name="tel"
                       placeholder="Enter your phone number"
+                      tabindex="0"
+                      required
                     />
                   </div>
                 </div>
@@ -287,8 +319,10 @@
                     type="email"
                     class="form-control"
                     id="email"
+                    name="email"
                     aria-describedby="emailHelp"
                     placeholder="Enter your email address"
+                    tabindex="0"
                     required
                   />
                 </div>
@@ -300,6 +334,7 @@
                       type="radio"
                       name="inquiryReason"
                       id="residentialRentals"
+                      tabindex="0"
                       value="Residential Rentals"
                     />
                     <span class="gold-circle"></span>
@@ -313,6 +348,7 @@
                       type="radio"
                       name="inquiryReason"
                       id="residentialPurchase"
+                      tabindex="0"
                       value="Residential Purchase"
                     />
 
@@ -327,6 +363,7 @@
                       type="radio"
                       name="inquiryReason"
                       id="commercialLeasing"
+                      tabindex="0"
                       value="Commercial Leasing"
                     />
 
@@ -342,6 +379,7 @@
                       type="radio"
                       name="inquiryReason"
                       id="developmentQuestions"
+                      tabindex="0"
                       value="Development Questions"
                     />
                     <span class="gold-circle"></span>
@@ -356,11 +394,23 @@
                     class="form-control"
                     id="message"
                     rows="3"
+                    tabindex="0"
+                    name="message"
                     placeholder="Enter your message"
                   ></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Send</button>
+
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://web3forms.com/success"
+                />
+
+                <button type="submit" class="btn btn-primary" tabindex="0">
+                  Send
+                </button>
               </form>
+              <div id="result"></div>
             </div>
           </div>
         </div>
@@ -369,12 +419,16 @@
       <section class="map mt-0 position-relative">
         <a
           target="_blank"
+          title="Location on Google Map"
           href="https://www.google.com/maps/place/740+Sansom+St+%23501,+Philadelphia,+PA+19106,+USA/@39.9485826,-75.1565178,17z/data=!3m1!4b1!4m6!3m5!1s0x89c6c882a56350f7:0xd704bf4fd47d86aa!8m2!3d39.9485785!4d-75.1539429!16s%2Fg%2F11qz9_vqp0?entry=ttu"
           class="stretched-link"
-          ><span class="d-none">location on Google Maps</span></a
+          aria-label="Location on Google Map"
+          tabindex="0"
+          ><span class="text-indent">location on Google Maps</span></a
         >
         <div class="map-wrapper">
           <iframe
+            role="application"
             title="PRDC Lead Developer Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.5811383473356!2d-75.35079652360878!3d40.12933707308014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c69627b342bca3%3A0xed1d267def68baae!2s1001%20Sterigere%20St%2C%20Norristown%2C%20PA%2019401%2C%20USA!5e0!3m2!1sen!2sin!4v1712744404134!5m2!1sen!2sin"
             width="600"
@@ -388,13 +442,13 @@
       </section>
     </main>
 
-    <footer class="site-footer text-white">
+    <footer class="site-footer text-white" role="contentinfo">
       <div class="container z-2 position-relative">
         <div class="row">
           <div class="col-md-6">
             <ul class="footer-content list-unstyled">
               <li>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#" tabindex="0" role="button">
                   <img
                     src="images/logo.png"
                     alt="Preserveat Stony Creek"
@@ -406,13 +460,14 @@
                 <address>
                   <a
                     target="_blank"
+                    tabindex="0"
                     href="https://www.google.com/maps/place/740+Sansom+St+%23501,+Philadelphia,+PA+19106,+USA/@39.9485826,-75.1565178,17z/data=!3m1!4b1!4m6!3m5!1s0x89c6c882a56350f7:0xd704bf4fd47d86aa!8m2!3d39.9485785!4d-75.1539429!16s%2Fg%2F11qz9_vqp0?entry=ttu"
                     >740 Sansom St #501, Philadelphia, PA 19106</a
                   >
                 </address>
               </li>
               <li>
-                <a target="_blank" href="mailto:tony@prdcllc.com"
+                <a target="_blank" href="mailto:tony@prdcllc.com" tabindex="0"
                   >Tony@prdcllc.com</a
                 >
               </li>
