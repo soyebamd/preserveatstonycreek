@@ -34,6 +34,24 @@ const englishLang = {
     heading: "PRDC Lead Developer",
     desc: "Pinnacle Realty Development Company was started by David Perlman and Anthony Maras to acquire developable properties, often in blighted and/or underserved areas. David and Tony are proud of their accomplishments on projects such as 650 Fairmount (407 unit redevelopment in Philadelphia); The Heid Building (adaptive re-use in Philadelphia), 600,000 sq ft High-Bay cold/ambient Automated Storage building in Middletown, De, River Pointe (618 total units in Bridgeport, PA).",
   },
+
+  contactUs: {
+    heading: "Contact Us",
+    desc: "Submit your inquiry for Residential Rentals, Residential Purchase, Commercial Leasing, and Development Questions.",
+    formData: {
+      firstName: "Enter your name",
+      phoneNumber: "Enter your phone number",
+      emailAddress: "Enter you email Address",
+      equiry: "Reason for Inquiry",
+      enquiryOptions: [
+        "Residential Rentals",
+        "Residential Purchase",
+        "Commercial Leasing",
+        "Development Questions",
+      ],
+      message: "Enter Your Message",
+    },
+  },
 };
 
 //Spanish
@@ -68,6 +86,24 @@ const spanishLang = {
     heading: "Desarrollador líder del PRDC",
     desc: "Pinnacle Realty Development Company fue fundada por David Perlman y Anthony Maras para adquirir propiedades urbanizables, a menudo en áreas arruinadas y/o desatendidas. David y Tony están orgullosos de sus logros en proyectos como 650 Fairmount (reurbanización de 407 unidades en Filadelfia); El edificio Heid (reutilización adaptativa en Filadelfia), edificio de almacenamiento automatizado en frío/ambiente de gran altura de 600 000 pies cuadrados en Middletown, Delaware, River Pointe (618 unidades en total en Bridgeport, PA).",
   },
+
+  contactUs: {
+    heading: "Contáctenos",
+    desc: "Envíe su consulta para Alquileres Residenciales, Compra Residencial, Arrendamiento Comercial y Preguntas de Desarrollo.",
+    formData: {
+      firstName: "Ingrese su nombre",
+      phoneNumber: "Ingrese su número de teléfono",
+      emailAddress: "Ingrese su dirección de correo electrónico",
+      equiry: "Motivo de la consulta",
+      enquiryOptions: [
+        "Alquileres Residenciales",
+        "Compra Residencial",
+        "Arrendamiento Comercial",
+        "Preguntas de Desarrollo",
+      ],
+      message: "Ingrese su mensaje",
+    },
+  },
 };
 
 // const { navbar } = spanishLang;
@@ -90,6 +126,10 @@ const icons_text = document.querySelectorAll(".icons_text");
 // lead-developer
 
 const leadDeveloper = document.querySelector(".lead-developer");
+
+// Contact Us
+
+const contact = document.querySelector("#contact");
 
 lang.forEach((langBtn) => {
   langBtn.addEventListener("click", function () {
@@ -131,6 +171,28 @@ lang.forEach((langBtn) => {
         setLang.leadDeveloper.heading;
 
       leadDeveloper.querySelector("p").textContent = setLang.leadDeveloper.desc;
+
+      //contact us data
+
+      contact.querySelector(".contact-text-wrapper h3").textContent =
+        setLang.contactUs.heading;
+      contact.querySelector(".contact-text-wrapper p").textContent =
+        setLang.contactUs.desc;
+
+      contact
+        .querySelector("#form #name")
+        .setAttribute("placeholder", setLang.contactUs.formData.firstName);
+
+      contact
+        .querySelector("#form #phone")
+        .setAttribute("placeholder", setLang.contactUs.formData.phoneNumber);
+
+      contact
+        .querySelector("#form #email")
+        .setAttribute("placeholder", setLang.contactUs.formData.emailAddress);
+
+      contact.querySelector("#form .inquery").textContent =
+        setLang.contactUs.formData.equiry;
     });
   });
 });
