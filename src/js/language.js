@@ -50,6 +50,7 @@ const englishLang = {
         "Development Questions",
       ],
       message: "Enter Your Message",
+      btnText: "Submit",
     },
   },
 };
@@ -61,7 +62,7 @@ const spanishLang = {
     contact: "CONTÁCTENOS",
   },
   banner: {
-    heading: "CONSERVAR EN STONY CREEK",
+    heading: "Preserve at Stony Creek",
   },
   ourVision: {
     tag: "NUESTRA VISIÓN",
@@ -102,6 +103,7 @@ const spanishLang = {
         "Preguntas de Desarrollo",
       ],
       message: "Ingrese su mensaje",
+      btnText: "Enviar",
     },
   },
 };
@@ -130,6 +132,10 @@ const leadDeveloper = document.querySelector(".lead-developer");
 // Contact Us
 
 const contact = document.querySelector("#contact");
+
+//  class="reasone-option"
+
+const reasoneOption = document.querySelectorAll(".reasone-option");
 
 lang.forEach((langBtn) => {
   langBtn.addEventListener("click", function () {
@@ -193,6 +199,16 @@ lang.forEach((langBtn) => {
 
       contact.querySelector("#form .inquery").textContent =
         setLang.contactUs.formData.equiry;
+
+      reasoneOption.forEach((resoneText, i) => {
+        resoneText.textContent = setLang.contactUs.formData.enquiryOptions[i];
+      });
+
+      contact.querySelector("#form #message").textContent =
+        setLang.contactUs.formData.message;
+
+      contact.querySelector("#form .btn").textContent =
+        setLang.contactUs.formData.btnText;
     });
   });
 });

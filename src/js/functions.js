@@ -19,12 +19,26 @@ $(".slide-show").slick({
 const form = document.getElementById("form");
 const result = document.getElementById("result");
 
+const lang = document.querySelectorAll(".langbtn");
+let checkLang = "english";
+lang.forEach((currentlang) => {
+  currentlang.addEventListener("click", function () {
+    // console.log("CURRENT LANGUAGE SELEGED" + this.getAttribute("data-lang"));
+
+    checkLang = this.getAttribute("data-lang");
+  });
+});
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-  result.innerHTML = "Wait Please...";
+  if (checkLang == "english") {
+    result.innerHTML = "Wait Please...";
+  } else {
+    result.innerHTML = "Espere por favor...";
+  }
 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
@@ -36,8 +50,10 @@ form.addEventListener("submit", function (e) {
   })
     .then(async (response) => {
       let json = await response.json();
+
       if (response.status == 200) {
-        result.innerHTML = `
+        if (checkLang == "english") {
+          result.innerHTML = `
         
         <span id="close">
         
@@ -49,14 +65,35 @@ form.addEventListener("submit", function (e) {
           <p>Best regards,</p>
 
           <p><strong>The Preserve at Stony Creek Team</strong></p>`;
+        } else {
+          result.innerHTML = `<span id="close">
+        
+<i class="fa-solid fa-xmark"></i>
+</span>
+        
+<p>¡Gracias por tu interés en The Preserve at Stony Creek! Apreciamos que te hayas tomado el tiempo de contactarnos. Hemos recibido tu mensaje y uno de nuestros miembros del equipo se pondrá en contacto contigo pronto para proporcionarte más información y responder cualquier pregunta que puedas tener.</p>
+          
+<p>Saludos cordiales,</p>
+
+<p><strong>El equipo de The Preserve at Stony Creek</strong></p>
+`;
+        }
       } else {
         console.log(response);
-        result.innerHTML = "Some Error Detected";
+        if (checkLang == "english") {
+          result.innerHTML = "Some Error Detected";
+        } else {
+          result.innerHTML = "Se detectó algún error";
+        }
       }
     })
     .catch((error) => {
       console.log(error);
-      result.innerHTML = "Something went wrong!";
+      if (checkLang == "english") {
+        result.innerHTML = "Something went wrong!";
+      } else {
+        result.innerHTML = "Algo salió mal!";
+      }
     })
     .then(function () {
       form.reset();
